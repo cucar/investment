@@ -1,2 +1,1 @@
-# investment
-Investment Research Platform
+# Investment Research Platform
