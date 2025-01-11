@@ -1,8 +1,6 @@
-from llama_index.core import VectorStoreIndex
+from postgres import get_vector_index
 
-from pgvectorstore import get_pg_vector_store
-
-index = VectorStoreIndex.from_vector_store(vector_store=get_pg_vector_store())
+index = get_vector_index()
 
 query_engine = index.as_query_engine(vector_store_query_mode="hybrid")
 
