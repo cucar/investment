@@ -16,15 +16,3 @@ alter default privileges in schema public grant all privileges on functions TO a
 
 -- enable pgvector
 create extension vector;
-
--- tables
-create table projects_feed (
-    feed_id serial primary key,
-	feed_url varchar(255),
-	feed_title text,
-	feed_description text,
-	feed_time timestamp, 
-	feed_content text
-);
-
-select * from projects_feed;
