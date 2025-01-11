@@ -28,6 +28,7 @@ def get_pg_vector_store():
         password=os.environ['POSTGRES_PASSWORD'],
         database=os.environ['POSTGRES_DATABASE'],
         table_name="chunks",
+        hybrid_search=True,
         embed_dim=1536, # openai embedding dimension
         hnsw_kwargs={
             "hnsw_m": 16,
