@@ -1,10 +1,10 @@
 from you_com import call_you_com
 from postgres import index_document
 
+# this is to emulate the alert system - user will receive an alert if the the found news is not already in the database
 # call you.com api to get the latest news regarding the project alert and save them to the database if not already there 
-# alert = "Trump's economic policies impact on the housing market"
-alert = "Housing turnover rates changing"
-rows = call_you_com(alert, 10)
+alert = "housing turnover rates changing"
+rows = call_you_com(alert, 10, "news")
 for row in rows:
     
     # print the news for debug
